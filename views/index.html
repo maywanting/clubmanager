@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>课堂管理系统</title>
+
+    <!-- Bootstrap Core CSS -->
+    <link href="../vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- MetisMenu CSS -->
+    <link href="../vendor/metisMenu/metisMenu.min.css" rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <link href="../dist/css/sb-admin-2.css" rel="stylesheet">
+
+    <!-- Morris Charts CSS -->
+    <link href="../vendor/morrisjs/morris.css" rel="stylesheet">
+
+    <!-- Custom Fonts -->
+    <link href="../vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+</head>
+
+<body>
+
+    <div id="wrapper">
+
+        <!-- Navigation -->
+        <nav class="navbar navbar-default navbar-static-top" role="navigation" style="margin-bottom: 0">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="index.html">课堂管理系统</a>
+            </div>
+            <!-- /.navbar-header -->
+<ul class="nav navbar-top-links navbar-right">
+                <li class="dropdown">
+                    <a class="dropdown-toggle" data-toggle="dropdown" href="#">
+                        <i class="fa fa-user fa-fw"></i> <i class="fa fa-caret-down"></i>
+                    </a>
+                    <ul class="dropdown-menu dropdown-user">
+                        <li><a href="#"><i class="fa fa-user fa-fw"></i> 用户简况</a>
+                        </li>
+                        <li><a href="#"><i class="fa fa-gear fa-fw"></i> 设置</a>
+                        </li>
+                        <li class="divider"></li>
+                        <li><a href="LoginPage.html"><i class="fa fa-sign-out fa-fw"></i> 退出登录</a>
+                        </li>
+                    </ul>
+                    <!-- /.dropdown-user -->
+                </li>
+                <!-- 用户设置 -->
+            </ul>
+            <!-- /.navbar-top-links -->
+
+            <div class="navbar-default sidebar" role="navigation">
+                <div class="sidebar-nav navbar-collapse">
+                    <ul class="nav" id="side-menu">
+                        <li>
+                            <a href="index.html"><i class="fa fa-dashboard fa-fw"></i> 课时管理<span class="fa arrow"></span></a>
+                            <ul class="nav nav-second-level">
+                                <li>
+                                    <a href="index.html">查看课表及计划</a>
+                                </li>
+                                <li>
+                                    <a href="change_plan.html">修改课时安排</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="#"><i class="fa fa-list fa-fw"></i>课堂点名<span class="fa arrow"></span></a>
+                            <ul class="nav nav-second-level">
+                                <li>
+                                    <a class="active" href="stu_attend.html">课程学生名单</a>
+                                </li>
+                            </ul>
+                            <!-- /.nav-second-level -->
+                        </li>
+                        <li>
+                            <a href="#"><i class="fa fa-edit fa-fw"></i> 课堂评测<span class="fa arrow"></span></a>
+                            <ul class="nav nav-second-level">
+                                <li>
+                                    <a href="stu_ques.html">问答学生名单</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="#"><i class="fa fa-group fa-fw"></i> 课堂讨论<span class="fa arrow"></span></a>
+                            <ul class="nav nav-second-level">
+                                <li>
+                                    <a href="class_disc1.html">课题讨论1</a>
+                                </li>
+                                <li>
+                                    <a href="class_disc2.html">课题讨论2</a>
+                                </li>
+                                <li>
+                                    <a href="class_disc3.html">课题讨论3</a>
+                                </li>
+                                <li>
+                                    <a href="class_disc4.html">课题讨论4</a>                               
+                                </li>
+                                <li>
+                                    <a href="class_disc5.html">课题讨论5</a>                               
+                                </li>
+                                <li>
+                                    <a href="class_disc6.html">课题讨论6</a>                               
+                                </li>
+                            </ul>
+                            <!-- /.nav-second-level -->
+                        </li>
+                        <li>
+                            <a href="#"><i class="fa fa-table fa-fw"></i> 分析统计<span class="fa arrow"></span></a>
+                            <ul class="nav nav-second-level">
+                                <li>
+                                    <a href="overall_score.html">学生综合成绩</a>
+                                </li>
+                                <li>
+                                    <a href="grade_list.html">各项详细成绩</a>
+                                </li>
+                            </ul>
+                            <!-- /.nav-second-level -->
+                        </li>
+                        <li>
+                            <a href="#"><i class="fa fa-cubes fa-fw"></i> 学期管理<span class="fa arrow"></span></a>
+                            <ul class="nav nav-second-level">
+                                <li>
+                                    <a href="class_upload.html">初始化导入</a>
+                                </li>
+                                <li>
+                                    <a href="export_all.html">导出归档</a>
+                                </li>
+                                <li>
+                                    <a href="ppt_manage.html">课件管理</a>
+                                </li>
+                            </ul>
+                            <!-- /.nav-second-level -->
+                        </li>
+                    </ul>
+                </div>
+                <!-- /.sidebar-collapse -->
+            </div>
+            <!-- /.navbar-static-side -->
+        </nav>
+        <!--ClaaatablePage-->
+        <div id="page-wrapper">
+            <div class="row">
+                <div class="col-lg-12">
+                    <h1 class="page-header">本周教学安排</h1>
+                </div>
+                <!--课表显示-->
+                <div class="col-lg-8">
+                    <div class="panel panel-default">
+                        <div class="panel-heading">
+                            <i class="fa fa-th fa-fw"></i> 本周课表
+                            <div class="pull-right">
+                                <div class="btn-group">
+                                    <button type="button" class="btn btn-default btn-xs dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
+                                        N周
+                                        <span class="caret"></span>
+                                    </button>
+                                    <ul class="dropdown-menu pull-right" role="menu">
+                                        <li><a href="#">第1周</a></li>
+                                        <li><a href="#">第2周</a></li>
+                                        <li><a href="#">第3周</a></li>
+                                        <li><a href="#">第4周</a></li>
+                                        <li><a href="#">第5周</a></li>
+                                        <li><a href="#">第6周</a></li>
+                                        <li><a href="#">第7周</a></li>
+                                        <li><a href="#">第8周</a></li>
+                                        <li><a href="#">第9周</a></li>
+                                        <li><a href="#">第10周</a></li>
+                                        <li><a href="#">第11周</a></li>
+                                        <li><a href="#">第12周</a></li>
+                                        <li><a href="#">第13周</a></li>
+                                        <li><a href="#">第14周</a></li>
+                                        <li><a href="#">第15周</a></li>
+                                        <li><a href="#">第16周</a></li>
+                                        <li><a href="#">第17周</a></li>
+                                        <li><a href="#">第18周</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- /.panel-heading -->
+                        <div class="panel-body">
+                            <div class="table-responsive">
+                                <table class="table table-striped table-bordered table-hover">
+                                    <thead>
+                                        <tr>
+                                            <th>#</th>
+                                            <th>周一</th>
+                                            <th>周二</th>
+                                            <th>周三</th>
+                                            <th>周四</th>
+                                            <th>周五</th>
+                                            <th>周六</th>
+                                            <th>周日</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>am.8:00-8:50</td>
+                                            <td>aaaaaaaa</td>
+                                            <td>bbbdddbb</td>
+                                            <td>cccccccc</td>
+                                            <td>dddddddd</td>
+                                            <td>eeeeeeee</td>
+                                            <td>ffffffff</td>
+                                            <td>gggggggg</td>
+                                        </tr>
+                                        <tr>
+                                            <td>am.9:00-9:50</td>
+                                            <td>aaaaaaaa</td>
+                                            <td>bbbdddbb</td>
+                                            <td>cccccccc</td>
+                                            <td>dddddddd</td>
+                                            <td>eeeeeeee</td>
+                                            <td>ffffffff</td>
+                                            <td>gggggggg</td>
+                                        </tr>
+                                        <tr>
+                                            <td>am.10:10-11:00</td>
+                                            <td>aaaaaaaa</td>
+                                            <td>bbbdddbb</td>
+                                            <td>cccccccc</td>
+                                            <td>dddddddd</td>
+                                            <td>eeeeeeee</td>
+                                            <td>ffffffff</td>
+                                            <td>gggggggg</td>
+                                        </tr>
+                                        <tr>
+                                            <td>am.11:10-12:00</td>
+                                            <td>aaaaaaaa</td>
+                                            <td>bbbdddbb</td>
+                                            <td>cccccccc</td>
+                                            <td>dddddddd</td>
+                                            <td>eeeeeeee</td>
+                                            <td>ffffffff</td>
+                                            <td>gggggggg</td>
+                                        </tr>
+                                        <tr>
+                                            <td>pm.1:30-2:20</td>
+                                            <td>aaaaaaaa</td>
+                                            <td>bbbdddbb</td>
+                                            <td>cccccccc</td>
+                                            <td>dddddddd</td>
+                                            <td>eeeeeeee</td>
+                                            <td>ffffffff</td>
+                                            <td>gggggggg</td>
+                                        </tr>
+                                        <tr>
+                                            <td>pm.2:30-3:20</td>
+                                            <td>aaaaaaaa</td>
+                                            <td>bbbdddbb</td>
+                                            <td>cccccccc</td>
+                                            <td>dddddddd</td>
+                                            <td>eeeeeeee</td>
+                                            <td>ffffffff</td>
+                                            <td>gggggggg</td>
+                                        </tr>
+                                        <tr>
+                                            <td>pm.3:40-4:30</td>
+                                            <td>aaaaaaaa</td>
+                                            <td>bbbdddbb</td>
+                                            <td>cccccccc</td>
+                                            <td>dddddddd</td>
+                                            <td>eeeeeeee</td>
+                                            <td>ffffffff</td>
+                                            <td>gggggggg</td>
+                                        </tr>
+                                        <tr>
+                                            <td>pm.4:40-5:30</td>
+                                           <td>aaaaaaaa</td>
+                                            <td>bbbdddbb</td>
+                                            <td>cccccccc</td>
+                                            <td>dddddddd</td>
+                                            <td>eeeeeeee</td>
+                                            <td>ffffffff</td>
+                                            <td>gggggggg</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                            <!-- /.table-responsive -->
+                        </div>
+                        <!-- /.panel-body -->
+                    </div>
+                </div>
+                <!--课表显示-->
+
+                <!--教学计划显示-->
+                <div class="col-lg-4" id="teaching_plan">
+                    <div class="panel panel-default">
+                        <div class="panel-heading">
+                            <i class="fa fa-tasks fa-fw"></i> 本周教学计划
+                        </div>
+                        <!-- /.panel-heading -->
+                        <div class="panel-body">
+                        <p>待导入教学计划</p>
+                        <!--插入教学计划-->
+                         </div>
+                        <!-- /.panel-body -->
+                    </div>
+                    <!-- /.panel -->
+                </div>
+                <!--教学计划显示-->
+
+        <!--/ClaaatablePage-->
+
+            </div>
+            <!-- /.row -->
+
+        </div>
+        <!-- /#page-wrapper -->
+
+    </div>
+    <!-- /#wrapper -->
+
+    <!-- jQuery -->
+    <script src="../vendor/jquery/jquery.min.js"></script>
+
+    <!-- Bootstrap Core JavaScript -->
+    <script src="../vendor/bootstrap/js/bootstrap.min.js"></script>
+
+    <!-- Metis Menu Plugin JavaScript -->
+    <script src="../vendor/metisMenu/metisMenu.min.js"></script>
+
+    <!-- Morris Charts JavaScript -->
+    <script src="../vendor/raphael/raphael.min.js"></script>
+    <script src="../vendor/morrisjs/morris.min.js"></script>
+    <script src="../data/morris-data.js"></script>
+
+    <!-- Custom Theme JavaScript -->
+    <script src="../dist/js/sb-admin-2.js"></script>
+
+</body>
+
+</html>

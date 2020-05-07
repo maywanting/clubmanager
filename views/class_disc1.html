@@ -1,0 +1,422 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>课堂管理系统</title>
+
+    <!-- Bootstrap Core CSS -->
+    <link href="../vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- MetisMenu CSS -->
+    <link href="../vendor/metisMenu/metisMenu.min.css" rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <link href="../dist/css/sb-admin-2.css" rel="stylesheet">
+
+    <!-- Morris Charts CSS -->
+    <link href="../vendor/morrisjs/morris.css" rel="stylesheet">
+
+    <!-- Custom Fonts -->
+    <link href="../vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+<!--隐藏或显示div-->
+<script type="text/javascript">
+    function showHideDiv2(div1,div2,div3) { 
+
+    style="display: none;"
+
+    document.getElementById(div1).style.display="";//show
+
+    document.getElementById(div2).style.display="none";//hide
+
+    document.getElementById(div3).style.display="none";//hide
+    }
+</script>
+<!--/隐藏或显示div-->
+
+</head>
+
+<body>
+
+    <div id="wrapper">
+
+        <!-- Navigation -->
+        <nav class="navbar navbar-default navbar-static-top" role="navigation" style="margin-bottom: 0">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="index.html">课堂管理系统</a>
+            </div>
+            <!-- /.navbar-header -->
+<ul class="nav navbar-top-links navbar-right">
+                <li class="dropdown">
+                    <a class="dropdown-toggle" data-toggle="dropdown" href="#">
+                        <i class="fa fa-user fa-fw"></i> <i class="fa fa-caret-down"></i>
+                    </a>
+                    <ul class="dropdown-menu dropdown-user">
+                        <li><a href="#"><i class="fa fa-user fa-fw"></i> 用户简况</a>
+                        </li>
+                        <li><a href="#"><i class="fa fa-gear fa-fw"></i> 设置</a>
+                        </li>
+                        <li class="divider"></li>
+                        <li><a href="LoginPage.html"><i class="fa fa-sign-out fa-fw"></i> 退出登录</a>
+                        </li>
+                    </ul>
+                    <!-- /.dropdown-user -->
+                </li>
+                <!-- 用户设置 -->
+            </ul>
+            <!-- /.navbar-top-links -->
+
+            <div class="navbar-default sidebar" role="navigation">
+                <div class="sidebar-nav navbar-collapse">
+                    <ul class="nav" id="side-menu">
+                        <li>
+                            <a href="index.html"><i class="fa fa-dashboard fa-fw"></i> 课时管理<span class="fa arrow"></span></a>
+                            <ul class="nav nav-second-level">
+                                <li>
+                                    <a href="index.html">查看课表及计划</a>
+                                </li>
+                                <li>
+                                    <a href="change_plan.html">修改课时安排</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="#"><i class="fa fa-list fa-fw"></i>课堂点名<span class="fa arrow"></span></a>
+                            <ul class="nav nav-second-level">
+                                <li>
+                                    <a class="active" href="stu_attend.html">课程学生名单</a>
+                                </li>
+                            </ul>
+                            <!-- /.nav-second-level -->
+                        </li>
+                        <li>
+                            <a href="#"><i class="fa fa-edit fa-fw"></i> 课堂评测<span class="fa arrow"></span></a>
+                            <ul class="nav nav-second-level">
+                                <li>
+                                    <a href="stu_ques.html">问答学生名单</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="#"><i class="fa fa-group fa-fw"></i> 课堂讨论<span class="fa arrow"></span></a>
+                            <ul class="nav nav-second-level">
+                                <li>
+                                    <a href="class_disc1.html">课题讨论1</a>
+                                </li>
+                                <li>
+                                    <a href="class_disc2.html">课题讨论2</a>
+                                </li>
+                                <li>
+                                    <a href="class_disc3.html">课题讨论3</a>
+                                </li>
+                                <li>
+                                    <a href="class_disc4.html">课题讨论4</a>                               
+                                </li>
+                                <li>
+                                    <a href="class_disc5.html">课题讨论5</a>                               
+                                </li>
+                                <li>
+                                    <a href="class_disc6.html">课题讨论6</a>                               
+                                </li>
+                            </ul>
+                            <!-- /.nav-second-level -->
+                        </li>
+                        <li>
+                            <a href="#"><i class="fa fa-table fa-fw"></i> 分析统计<span class="fa arrow"></span></a>
+                            <ul class="nav nav-second-level">
+                                <li>
+                                    <a href="overall_score.html">学生综合成绩</a>
+                                </li>
+                                <li>
+                                    <a href="grade_list.html">各项详细成绩</a>
+                                </li>
+                            </ul>
+                            <!-- /.nav-second-level -->
+                        </li>
+                        <li>
+                            <a href="#"><i class="fa fa-cubes fa-fw"></i> 学期管理<span class="fa arrow"></span></a>
+                            <ul class="nav nav-second-level">
+                                <li>
+                                    <a href="class_upload.html">初始化导入</a>
+                                </li>
+                                <li>
+                                    <a href="export_all.html">导出归档</a>
+                                </li>
+                                <li>
+                                    <a href="ppt_manage.html">课件管理</a>
+                                </li>
+                            </ul>
+                            <!-- /.nav-second-level -->
+                        </li>
+                    </ul>
+                </div>
+                <!-- /.sidebar-collapse -->
+            </div>
+            <!-- /.navbar-static-side -->
+        </nav>
+        <!--ClaaatablePage-->
+        <div id="page-wrapper">
+            <div class="row">
+                <div class="col-lg-12">
+                    <h1 class="page-header">课题讨论1</h1>
+                </div>
+                <!--讨论课题编辑 显示-->
+                <div class="form-group">
+                    <h4><i class="fa fa-inbox fa-fw"></i>本次讨论内容</h4>
+                    <textarea class="form-control" rows="6"></textarea>
+                </div>
+                <div class="pull-right">
+                        <button type="button" class="btn btn-outline btn-primary">保存</button>
+                </div>>
+                <!--/讨论课题编辑 显示-->
+                <!--学生分组选项-->
+                <div class="form-group">
+                    <h4><i class="fa fa-comments fa-fw"></i>学生分组选项</h4>
+                        <button class="btn btn-outline btn-primary btn-sm" type="button" onclick="showHideDiv2('random_group','auto_group','show_auto_group')">    随机分组   </button>
+                        <button class="btn btn-outline btn-primary btn-sm" type="button" onclick="showHideDiv2('auto_group','random_group','show_auto_group')">   自主分组   </button>
+                </div>
+                <!--/学生分组选项-->
+
+                <!--随机分组div-->
+                <div class="col-lg-12" id="random_group" style="display:none">
+                    <div class="col-lg-3">
+                        <div class="input-group">
+                            <input class="form-control input-sm" id="btn-input" type="text" placeholder="请输入每组人数...">
+                            <span class="input-group-btn">
+                                <button class="btn btn-warning btn-sm" id="btn-chat">开始分组</button>
+                            </span>
+                         </div>
+                     </div>
+                     <div class="col-lg-12">
+                        <div class="col-lg-6">
+                        <div class="panel panel-default">
+                            <div class="panel-heading">
+                            第1组
+                            </div>
+                        <!-- /.panel-heading -->
+                        <div class="panel-body">
+                            <div class="table-responsive">
+                                <table class="table table-striped table-bordered table-hover">
+                                    <thead>
+                                        <tr>
+                                            <th>#</th>
+                                            <th>学号</th>
+                                            <th>姓名</th>
+                                            <th>成绩</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>组长</td>
+                                            <td>122122</td>
+                                            <td>a</td>
+                                            <td><input class="form-control"></td>
+                                        </tr>
+                                        <tr>
+                                            <td>组员</td>
+                                            <td>12312312</td>
+                                            <td>b</td>
+                                            <td><input class="form-control"></td>
+                                        </tr>
+                                        <tr>
+                                            <td>组员</td>
+                                            <td>4324234</td>
+                                            <td>c</td>
+                                            <td><input class="form-control"></td>
+                                        </tr>
+                                        <tr>
+                                            <td>组员</td>
+                                            <td>12312</td>
+                                            <td>d</td>
+                                            <td><input class="form-control"></td>
+                                        </tr>
+                                        <tr>
+                                            <td>组员</td>
+                                            <td>12312312</td>
+                                            <td>e</td>
+                                            <td><input class="form-control"></td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                            <!-- /.table-responsive -->
+                        </div>
+                        <!-- /.panel-body -->
+                        </div>
+
+                        <!-- /.panel -->
+                        </div>
+                    </div>
+
+                    <!--保存分组情况 保存展示成绩-->
+                    <div class="col-lg-12">
+                        <button type="button" class="btn btn-outline btn-success">保存分组</button>
+                        <button type="button" class="btn btn-outline btn-primary">保存成绩</button>
+                    </div>>
+                    <!--/保存分组情况 存展示成绩-->
+                </div>
+                <!--/随机分组-->
+
+                <!--自主分组div-->
+                <div class="col-lg-12" id="auto_group" style="display:none">
+                    <div class="col-lg-4">
+                        <div class="panel panel-default">
+                        <div class="panel-heading">
+                            <i class="fa fa-bell fa-fw"></i> 本课程学生名单
+                        </div>
+                        <!-- /.panel-heading -->
+                        <div class="panel-body">
+                        <p>选中某行学号-姓名</p>
+                        <!--联入学生名单-->
+                         </div>
+                        <!-- /.panel-body -->
+                        </div>
+                    <!-- /.panel -->
+                    </div>
+                    <div class="col-lg-2">
+                        <!--选中某个学生，添加发哦右边小组表格中-->
+                        <button type="button" class="btn btn-outline btn-warning">添加到右侧小组中</button>
+
+                    </div>
+                    <div class="col-lg-4">
+                        <div class="panel panel-default">
+                        <div class="panel-heading">
+                            <i class="fa fa-bell fa-fw"></i> 新建小组-成员
+                        </div>
+                        <!-- /.panel-heading -->
+                        <div class="panel-body">
+                        <p>学号-姓名</p>
+                        <!--增加小组成员名单-->
+                         </div>
+                        <!-- /.panel-body -->
+                        </div>
+                    <!-- /.panel -->
+                    </div>
+                    <div class="col-lg-2">
+                        <!--保存该小组，清空小表，开始放下一小组成员-->
+                        <button type="button" class="btn btn-outline btn-warning">保存该组成员</button>
+                        <!--分组完成，显示所有小组情况-->
+                        <button type="button" class="btn btn-outline btn-danger" onclick="showHideDiv2('show_auto_group','auto_group','random_group')">显示已有分组</button>
+                    </div>
+                </div>
+                <!--/自主分组-->
+                
+                <!--自主分组完成后显示，录入成绩div-->
+                <div class="col-lg-12" id="show_auto_group">
+                    <div class="col-lg-6">
+                        <div class="panel panel-default">
+                            <div class="panel-heading">
+                            自主分组表
+                            </div>
+                        <!-- /.panel-heading -->
+                        <div class="panel-body">
+                            <div class="table-responsive">
+                                <table class="table table-striped table-bordered table-hover">
+                                    <thead>
+                                        <tr>
+                                            <th>组号</th>
+                                            <th>学号</th>
+                                            <th>姓名</th>
+                                            <th>成绩</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>1</td>
+                                            <td>122122</td>
+                                            <td>a</td>
+                                            <td><input class="form-control"></td>
+                                        </tr>
+                                        <tr>
+                                            <td>1</td>
+                                            <td>12312312</td>
+                                            <td>b</td>
+                                            <td><input class="form-control"></td>
+                                        </tr>
+                                        <tr>
+                                            <td>2</td>
+                                            <td>4324234</td>
+                                            <td>c</td>
+                                            <td><input class="form-control"></td>
+                                        </tr>
+                                        <tr>
+                                            <td>2</td>
+                                            <td>12312</td>
+                                            <td>d</td>
+                                            <td><input class="form-control"></td>
+                                        </tr>
+                                        <tr>
+                                            <td>2</td>
+                                            <td>12312312</td>
+                                            <td>e</td>
+                                            <td><input class="form-control"></td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                            <!-- /.table-responsive -->
+                        </div>
+                        <!-- /.panel-body -->
+                        </div>
+
+                        <!-- /.panel -->
+                        </div>
+                    <!--录入，保存成绩-->
+                    <div class="col-lg-12">
+                        <button type="button" class="btn btn-outline btn-primary">保存成绩</button>
+                    </div>>
+                    <!--/录入，保存成绩-->
+                </div>
+                <!--/自主分组完成后显示，录入成绩div-->
+
+        <!--/ClaaatablePage-->
+
+            </div>
+            <!-- /.row -->
+
+        </div>
+        <!-- /#page-wrapper -->
+
+    </div>
+    <!-- /#wrapper -->
+
+    <!-- jQuery -->
+    <script src="../vendor/jquery/jquery.min.js"></script>
+
+    <!-- Bootstrap Core JavaScript -->
+    <script src="../vendor/bootstrap/js/bootstrap.min.js"></script>
+
+    <!-- Metis Menu Plugin JavaScript -->
+    <script src="../vendor/metisMenu/metisMenu.min.js"></script>
+
+    <!-- Morris Charts JavaScript -->
+    <script src="../vendor/raphael/raphael.min.js"></script>
+    <script src="../vendor/morrisjs/morris.min.js"></script>
+    <script src="../data/morris-data.js"></script>
+
+    <!-- Custom Theme JavaScript -->
+    <script src="../dist/js/sb-admin-2.js"></script>
+
+</body>
+
+</html>
